@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .card:hover{
+        transform: scale(1.05);
+        box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+    }
+
+    .card::before, .card::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: scale3d(0, 0, 1);
+        transition: transform .3s ease-out 0s;
+        background: rgba(255, 255, 255, 0.1);
+        content: '';
+        pointer-events: none;
+    }
+
+    .card::before {
+        transform-origin: left top;
+    }
+
+    .card::after {
+        transform-origin: right bottom;
+    }
+
+    .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+        transform: scale3d(1, 1, 1);
+    }
+</style>
+<div class="py-5">
+    <div class="container">
+        <div class="row hidden-md-up">
+        {% for project in projects %}
+            <div class="col-md-4">
+                <div class="card 3000" data-effectJs="fade-up">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">{{project.title}}</h4>
+                        <h6 class="card-subtitle text-muted text-center"><small>{{project.subtitle}}</small></h6>
+                        <p class="card-text p-y-1" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">{{project.details}}</p>
+                        <a href="{% url 'project-details' project.id %}" class="card-link">Veiw More</a>
+                        <a href="{{project.gitlink}}" target="_blank" class="card-link">Github link</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

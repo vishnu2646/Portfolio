@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<section id="hero" class="d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center">
+        <h1 data-effectJs="zoomIn" class="2000">Vishnu Priyan J.</h1>
+        <h2 data-effectJs="zoomIn" class="2000">I'm a Junior Backend Developer || Python Developer</h2>
+        <a href="{% url 'about' %}" class="btn-about 2000" data-effectJs="zoomIn">About Me</a>
+        <div class="header-social-links mt-2 3000" data-effectJs="zoomIn">
+            <p class="text-center" style="color:white;">You Can Reach Me On</p>
+            {% for link in links %}
+            <a href="{{link.facebook}}" class="facebook" target="_blank" style="color:white;font-size:20px;margin:10px;text-decoration:bold;font-weight:600;">Facebook</a>
+            <a href="{{link.linkedin}}" class="linkedin" target="_blank" style="color:white;font-size:20px;margin:10px;text-decoration:bold;font-weight:600;">Linkedin</a>
+            <a href="{{link.github}}" class="github" target="_blank" style="color:white;font-size:20px;margin:10px;text-decoration:bold;font-weight:600;">GitHub</a>
+            <a href="{{link.instagram}}" class="instagram" target="_blank" style="color:white;font-size:20px;margin:10px;text-decoration:bold;font-weight:600;">Instagram</a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock content %}

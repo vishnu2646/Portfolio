@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+    <style>
+        textarea{
+            display: block;
+            width: 100%;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+    </style>
+    <div class="container mt-5">
+        <form method="POST">
+            {% csrf_token %}
+            <h4 class="modal-title text-center">Add New Project</h4>
+            {{form.as_p}}
+            <input type="submit" class="btn btn-primary" value="Add Project" style="background-color:#551dee;color:#fff;">
+        </form>
+    </div>
+    <br/>
+    <script>
+		var form_fields = document.getElementsByTagName('input')
+		form_fields[1].placeholder='Project Title..';
+		form_fields[2].placeholder='Project SubTitle..';
+		form_fields[3].placeholder='Enter GitHub Link...';
+		form_fields[4].placeholder='Category...';
+		form_fields[5].placeholder='Client...';
+		form_fields[6].placeholder='project Url...';
+		form_fields[8].placeholder='Start date of Project...';
+		form_fields[9].placeholder='End date of Project...';
+		form_fields[10].placeholder='Duration of Project...';
+
+		for (var field in form_fields){
+			form_fields[field].className += 'form-control'
+		}
+	</script>
+{% endblock content %}
