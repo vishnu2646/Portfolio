@@ -1,23 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <style>
-        
-    </style>
     <main id="main">
-        <section id="about" class="about mt-2">
+        <section id="about" class="about mt-5">
             <div class="container">
                 <div class="section-title">
                     <h2 class="text-center 3000" data-effectJs="fade-up">About</h2>
-                    {% for about in abouts %}
-                    <p data-effectJs="fade-up" class="2000">{{about.aboutme}}.</p>
-                    {% endfor %}
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <img src="{% static 'images/my.jpeg' %}" class="img-fluid 5000" data-effectJs="fade-left" alt="my image" height="100">
                     </div>
                     <div class="col-lg-8 pt-4 pt-lg-0 content">
+                        {% for about in abouts %}
+                            <p data-effectJs="fade-up" class="2000">{{about.aboutme}}</p>
+                        {% endfor %}
                         <h3 data-effectJs="fade-up" class="2000">Juniour Backend Developer &amp; Python Developer</h3>
                         <div class="row">
                             {% for about in abouts %}
@@ -33,7 +30,7 @@
                                 <ul data-effectJs="fade-up" class="2000">
                                     <li><i class="bi bi-rounded-right"></i> <strong>Age:</strong> {{about.age}}</li>
                                     <li><i class="bi bi-rounded-right"></i> <strong>Degree:</strong> {{about.degree}}</li>
-                                    <li><i class="bi bi-rounded-right"></i> <strong>Emailone:</strong> <a href="{{about.gmail}}" target="_blank">{{about.gmail}}</a></li>
+                                    <li><i class="bi bi-rounded-right"></i> <strong>Email:</strong> <a href="{{about.gmail}}" target="_blank">{{about.gmail}}</a></li>
                                     <li><i class="bi bi-rounded-right"></i> <strong>Freelance:</strong> {{about.freelance}}</li>
                                 </ul>
                             </div>

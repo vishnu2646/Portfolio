@@ -11,7 +11,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
         <style>
-        /*back to top*/
         #myBtn {
             display: none;
             position: fixed;
@@ -21,49 +20,43 @@
             font-size: 18px;
             border: none;
             outline: none;
-            background-color: #551dee;
+            background-color:#551dee;
             color: white;
             cursor: pointer;
             padding: 15px;
-            border-radius: 65%;
+            border-radius:50%;
         }
 
         #myBtn:hover {
-            background-color: #551dee;
+            background-color:#551dee;
         }
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white" style="height:80px;">
+        <nav class="navbar">
             <div class="container">
-                <a class="navbar-brand" href="#">VP</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'about' %}">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" target="_blank" href="{% static 'VishnuPriyan Resume.pdf' %}">Resume</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'projects' %}">Project</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+                <a href="#" class="navlogo">VP</a>
+                <ul class="main-nav">
+                    <li><a href="{% url 'home' %}" class="navlink">Home</a></li>
+                    <li><a href="{% url 'about' %}" class="navlink">About</a></li>
+                    <li><a href="{% static 'VishnuPriyan Resume.pdf' %}" target="_blank" class="navlink">Resume</a></li>
+                    <li><a href="{% url 'projects' %}" class="navlink">Projects</a></li>
+                    <li><a href="{% url 'contact' %}" class="navlink">Contact</a></li>
+                </ul>
+                <span class="mobile-nav" style="font-size:30px;cursor:pointer;color:#000;" onclick="openNav()">&#9776;</span>
+            </div>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="{% url 'home' %}" class="navlink">Home</a>
+                <a href="{% url 'about' %}" class="navlink">About</a>
+                <a href="{% static 'VishnuPriyan Resume.pdf' %}" target="_blank" class="navlink">Resume</a>
+                <a href="{% url 'projects' %}" class="navlink">Projects</a>
+                <a href="{% url 'contact' %}" class="navlink">Contact</a>
             </div>
         </nav>
         {% block content %}
         {% endblock content %}
-        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up"></i></button>
+        <a onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up"></i></a>
         <footer id="footer">
             <div class="container">
                 <div class="copyright">
@@ -84,21 +77,31 @@
             offset:120,
         });
 
-        var mybutton = document.getElementById("myBtn");
-        window.onscroll = function() {scrollFunction()};
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+            
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+        <script>
+            var mybutton = document.getElementById("myBtn");
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
             }
-        }
-        
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
+
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
         </script>
         <script src="{% static 'dist/effect-js.min.js' %}"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
