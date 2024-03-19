@@ -7,7 +7,7 @@ export interface AboutData {
 export const About: AboutData[] = [
     {
         title: 'Experience',
-        subtitle: '8 Years Working',
+        subtitle: '1.9 Years Working',
         icon: 'award'
     },
     {

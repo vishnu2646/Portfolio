@@ -13,17 +13,17 @@ export const Qualification = () => {
     }
 
     return (
-        <section className='qualification section'>
+        <section className='qualification section' id='qualification'>
             <h2 className="section__title">Qualification</h2>
             <span className="section__subtitle">My personel journey</span>
 
             <div className="qualification__container container">
                 <div className="qualification__tabs">
-                    <div className="qualification__button button--flex" onClick={() => toggleTab(1)}>
-                        <i className="uil uil-graduation-cap qualification__icon"></i> Experience
+                    <div className={`qualification__button button--flex ${toggleState === 1 ? 'active': ''}`} onClick={() => toggleTab(1)}>
+                        <i className="uil uil-briefcase-alt qualification__icon"></i>  Experience
                     </div>
-                    <div className="qualification__button button--flex" onClick={() => toggleTab(2)}>
-                        <i className="uil uil-briefcase-alt qualification__icon"></i> Education
+                    <div className={`qualification__button button--flex ${toggleState === 2 ? 'active' : ''}`} onClick={() => toggleTab(2)}>
+                        <i className="uil uil-graduation-cap qualification__icon"></i> Education
                     </div>
                 </div>
 

@@ -21,11 +21,5 @@ export const testimonialData: Testimonial[] = [
         title: 'Kddt',
         image: Image2,
         description: 'lorem ipsum dolor sit amet lore m themselves a conductor and a conductor of the world.'
-    },
-    {
-        id: 3,
-        title: 'Srivari Developers',
-        image: Image3,
-        description: 'lorem ipsum dolor sit amet lore m themselves a conductor and a conductor of the world.'
     }
 ]

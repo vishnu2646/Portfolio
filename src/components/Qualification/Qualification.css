@@ -20,6 +20,10 @@
     color: var(--title-color-dark);
 }
 
+.qualification__button.active {
+    color: var(--text-color);
+}
+
 .qualification__icon {
     font-size: 1.8rem;
     margin-right: var(--mb-0-25);

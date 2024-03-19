@@ -34,11 +34,17 @@ export const QualificationData: Group = {
             {
                 id: 1,
                 title: 'Applied Materials',
-                subtitle: 'Associate Software Engineer',
+                subtitle: 'Software Developer',
                 time: '2022 - Present'
             },
             {
                 id: 2,
+                title: 'Incresco (intern)',
+                subtitle: 'Software Developer (intern)',
+                time: '2022 (3 months)'
+            },
+            {
+                id: 3,
                 title: 'Sezzle',
                 subtitle: 'Product Engineer (intern)',
                 time: '2021 - 2022'
@@ -56,9 +62,15 @@ export const QualificationData: Group = {
             },
             {
                 id: 2,
-                title: 'Higher Secondary',
+                title: 'Secondary School Leaving Certificate',
                 subtitle: 'Sri Vijay Vidhyalaya, Hosur',
                 time: '2017 - 2018'
+            },
+            {
+                id: 3,
+                title: 'Higher Secondary',
+                subtitle: 'Sri Vijay Vidhyalaya, Hosur',
+                time: '2015 - 2016'
             }
         ]
     }

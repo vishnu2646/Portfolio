@@ -10,9 +10,9 @@ function App() {
                 <Home />
                 <About />
                 <Skill />
-                <Service />
+                {/* <Service /> */}
                 <Qualification />
-                <Testimonials />
+                {/* <Testimonials /> */}
                 <Contact />
             </main>
             <Footer />

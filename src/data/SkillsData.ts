@@ -3,9 +3,9 @@ export interface IFrontend {
     level: string
 }
 
-export interface IBackend {
-    technology: string
-    level: string
+export interface IBackend extends IFrontend{
+    // technology: string
+    // level: string
 }
 
 export const frontend: IFrontend[] = [
@@ -26,13 +26,21 @@ export const frontend: IFrontend[] = [
         level: 'Intermediate'
     },
     {
-        technology: 'Git',
+        technology: 'Angular',
         level: 'Intermediate'
     },
     {
         technology: 'vue',
         level: 'Beginner'
-    }
+    },
+    {
+        technology: 'Git',
+        level: 'Intermediate'
+    },
+    {
+        technology: 'Scss',
+        level: 'Intermediate'
+    },
 ] 
 
 export const backend: IBackend[] = [
@@ -51,5 +59,14 @@ export const backend: IBackend[] = [
     {
         technology: 'Django',
         level: 'Intermediate'
+    },
+    {
+        technology: 'Jest',
+        level: 'Intermediate'
+    },
+    {
+        technology: 'Jenkins',
+        level: 'Beginner'
     }
 ]
+

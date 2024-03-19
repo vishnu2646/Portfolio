@@ -17,8 +17,13 @@ export const About = () => {
                     <Info />
 
                     <p className="about__description">
-                        Frontend developer, I create a web pages with UI / UX iser Interface, 
-                        I have a years plus of experience and many clients are happy with the Projects carried Out.
+                        <li>Hey there! I'm a frontend developer who loves building cool stuff for the web. I'm all about making websites that look great and work smoothly for everyone.</li>
+
+                        <li>I'm really into coding with HTML, CSS, and JavaScript, and I've got experience with frameworks like React and Vue.js. Whether it's making a website look awesome on your phone or your computer, I've got you covered!</li>
+
+                        <li>I'm all about teamwork and learning new things. I'm constantly on the lookout for ways to make websites better and more user-friendly.</li>
+
+                        <li>Let's work together to create something awesome!</li>
                     </p>
 
                     <a download="" href={CV} className="button button--flex">
