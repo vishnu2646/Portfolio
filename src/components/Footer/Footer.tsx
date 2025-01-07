@@ -30,7 +30,7 @@ export const Footer = () => {
                         )
                     })}
                 </div>
-                <span className="footer__copy">&#169; VP Tech Solutions, All rights reserved</span>
+                <span className="footer__copy">&#169; Vishnupriyan, All rights reserved</span>
             </div>
         </footer>
     );

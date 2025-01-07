@@ -35,11 +35,11 @@ export const QualificationData: Group = {
                 id: 1,
                 title: 'Applied Materials',
                 subtitle: 'Software Developer',
-                time: '2022 - Present'
+                time: '2022 - 2024'
             },
             {
                 id: 2,
-                title: 'Incresco (intern)',
+                title: 'Incresco',
                 subtitle: 'Software Developer (intern)',
                 time: '2022 (3 months)'
             },
